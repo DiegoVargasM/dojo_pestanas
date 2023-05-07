@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Pestañas from "./components/Pestañas";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Pestañas
+        pestañas={[
+          {
+            label: "Pestaña 1",
+            content: "Contenido de la pestaña 1",
+            onTabClick: () => alert("Pestaña 1 clickeada")
+          },
+          {
+            label: "Pestaña 2",
+            content: "Contenido de la pestaña 2",
+            onTabClick: () => alert("Pestaña 2 clickeada"),
+          },
+          {
+            label: "Pestaña 3",
+            content: "Contenido de la pestaña 3",
+            onTabClick: () => alert("Pestaña 3 clickeada"),
+          },
+        ]}
+      />
     </div>
   );
 }
